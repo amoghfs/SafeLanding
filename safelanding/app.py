@@ -17,7 +17,7 @@ from torchvision import models
 model = models.resnet18(weights=None)
 model.fc = torch.nn.Linear(model.fc.in_features, 8)
 
-model.load_state_dict(torch.load("model.pth", map_location=torch.device("cpu")))
+model.load_state_dict(torch.load("safelanding/model.pth", map_location=torch.device("cpu")))
 model.eval()
 
 # ==========================================
